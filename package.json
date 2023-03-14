@@ -1,0 +1,24 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Federico Vitale <mail@fedevitale.dev>",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwind-variants": "^0.0.31",
+    "tailwindcss": "^3.2.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "prettier": "^2.8.4",
+    "turbo": "^1.8.3",
+    "typescript": "^4.9.5"
+  }
+}

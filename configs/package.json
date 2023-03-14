@@ -1,0 +1,18 @@
+{
+  "name": "@local/configs",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "tailwind.config.js",
+    "postcss.config.js",
+    "prettier.config.js",
+    "eslint.config.js"
+  ],
+  "author": "Federico Vitale <mail@fedevitale.dev>",
+  "license": "MIT",
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "tailwind-radix-colors": "^0.0.11"
+  }
+}

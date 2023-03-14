@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.vibrating {
+  animation: vibration 0.15s ease-in-out infinite alternate;
+}
+
+@keyframes vibration {
+  from {
+    transform: rotate(-0.5deg);
+  }
+
+  to {
+    transform: rotate(0.5deg);
+  }
+}
