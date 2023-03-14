@@ -22,25 +22,23 @@ export function ScrollingElement(props: ScrollingElementProps) {
   const offset = useMemo(() => 100 / props.elements.length, [props.elements])
 
   return (
-    <div className="relative w-full">
-      <motion.div className="opacity-0 w-full">
-        {props.activeElement}
-      </motion.div>
-      <div
-        className="absolute z-50 w-full top-0 inset-x-0"
-        style={{
-          height: 15,
-          background: "linear-gradient(#fff, rgba(0,0,0,0) 100%)",
-        }}
-      />
-      <div
-        className="absolute z-50 w-full inset-x-0"
-        style={{
-          height: 15,
-          bottom: -5,
-          background: "linear-gradient(rgba(0,0,0,0), #fff 100%)",
-        }}
-      />
+    <div className="relative">
+      <motion.div className="opacity-0">{props.activeElement}</motion.div>
+      {/* <div */}
+      {/*   className="absolute z-50 w-full top-0 inset-x-0" */}
+      {/*   style={{ */}
+      {/*     height: 15, */}
+      {/*     background: "linear-gradient(#fff, rgba(0,0,0,0) 100%)", */}
+      {/*   }} */}
+      {/* /> */}
+      {/* <div */}
+      {/*   className="absolute z-50 w-full inset-x-0" */}
+      {/*   style={{ */}
+      {/*     height: 15, */}
+      {/*     bottom: -5, */}
+      {/*     background: "linear-gradient(rgba(0,0,0,0), #fff 100%)", */}
+      {/*   }} */}
+      {/* /> */}
       <motion.div
         onAnimationStart={() => setIsAnimating(true)}
         onAnimationComplete={() => setIsAnimating(false)}
@@ -55,7 +53,7 @@ export function ScrollingElement(props: ScrollingElementProps) {
           color: isAnimating ? props.accent : undefined,
         }}
         className={clsx(
-          "absolute top-0 left-0",
+          "absolute top-0 left-0 text-left",
           "pointer-events-none transition-colors flex flex-col"
         )}
       >

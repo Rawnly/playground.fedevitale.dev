@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { useIntervalCounter } from "@/hooks/useIntervalCounter"
 import clsx from "clsx"
 
 import CardWithPrice from "./components/CardWithPrice"
@@ -26,7 +27,7 @@ export default function Page() {
 
   const [count, setCount] = useState(() => Math.floor(Math.random() * 1000))
 
-  const items = ["Hello World", "this is", "a test"]
+  const items = ["Hello World!", "this is", "a test"]
   const activeEl = useIntervalCounter(items.length - 1)
 
   return (
@@ -120,21 +121,4 @@ export default function Page() {
       </section>
     </div>
   )
-}
-
-function useIntervalCounter(max: number) {
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(
-      () => setCount((c) => (c + 1 > max ? 0 : c + 1)),
-      1250
-    )
-
-    return () => {
-      clearInterval(interval)
-    }
-  }, [setCount, max])
-
-  return count
 }

@@ -1,10 +1,11 @@
 "use client"
 
 import { useState } from "react"
+import { useIntervalCounter } from "@/hooks/useIntervalCounter"
 import clsx from "clsx"
 import { Check as CheckIcon } from "lucide-react"
 
-import MagicNumber from "../components/MagicNumber"
+import MagicNumber, { ScrollingElement } from "../components/MagicNumber"
 
 const frequencies = [
   { value: "monthly", label: "Monthly", priceSuffix: "/month" },
@@ -61,15 +62,24 @@ const tiers = [
 export default function Example() {
   const [frequency, setFrequency] = useState(frequencies[0])
 
+  const items = ["teams", "companies"]
+  const activeEl = useIntervalCounter(items.length - 1, 3000)
+
   return (
-    <div className="bg-white text-slate-900 dark:text-white dark:bg-gray-900 py-24 sm:py-32">
+    <div className="bg-white h-screen text-slate-900 dark:text-white dark:bg-gray-900 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-base font-semibold leading-7 text-indigo-400">
             Pricing
           </h2>
-          <p className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
-            Pricing plans for teams of&nbsp;all&nbsp;sizes
+          <p className="mt-2 gap-2.5 overflow-hidden relative flex inline-flex text-4xl font-bold tracking-tight sm:text-5xl">
+            Pricing plans for{" "}
+            <ScrollingElement
+              accent="rgb(99, 102, 241)"
+              elements={items}
+              activeElement={items[activeEl]}
+            />{" "}
+            of all sizes
           </p>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">

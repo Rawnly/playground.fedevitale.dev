@@ -1,0 +1,9 @@
+
+> pricing-section@0.1.0 build /Users/federicovitale/Developer/experiments/playground/apps/experiments
+> next build
+
+warn  - You have enabled experimental features (appDir, serverComponentsExternalPackages) in next.config.js.
+warn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+info  - Thank you for testing `appDir` please leave your feedback at https://nextjs.link/app-feedback
+
+info  - Creating an optimized production build...

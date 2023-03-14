@@ -4,6 +4,5 @@ module.exports = {
   experimental: {
     appDir: true,
     serverComponentsExternalPackages: ["@tremor/react"],
-    swcPlugins: [],
   },
 }

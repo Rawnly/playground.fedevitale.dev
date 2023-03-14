@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "turbo build",
+    "start": "turbo st,art",
+    "dev": "turbo dev"
   },
   "keywords": [],
   "author": "Federico Vitale <mail@fedevitale.dev>",
